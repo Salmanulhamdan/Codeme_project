@@ -8,6 +8,8 @@ from rest_framework import serializers
 from rest_framework import status
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.authentication import authenticate
+from rest_framework.permissions import IsAuthenticated
+from rest_framework_simplejwt.authentication import JWTAuthentication
 class Signup(APIView):
     permission_classes = [AllowAny]
     serializer_class = AccountSerializer
@@ -103,3 +105,19 @@ class Login(APIView):
             # if user none, wrong email or passord
             else:
                 return Response({"details": "wrong email or password"}, status=401)
+
+
+class GetUserView(APIView):
+    permission_classes=[IsAuthenticated]
+    authentication_classes=[JWTAuthentication]
+ 
+    def get(self,request):
+
+    
+        user_email = request.user
+        print(user_email)
+      
+        user_details = Account.objects.get(email=user_email)
+        serializer = AccountSerializer(instance=user_details)
+
+        return Response(serializer.data,status=200)

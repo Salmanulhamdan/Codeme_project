@@ -1,0 +1,12 @@
+export const baseUrl = "http://localhost:8000";
+export const login = "/api/login";
+export const register="/api/signup";
+export const user = "/api/user";
+export const refresh = "/api/refresh";
+export const clients="/api/clients/";
+export const broadcast="/api/broadcasts/"
+export const personalmessages="/api/personal-messages-list/"
+export const broadcastmessages="/api/broadcast-messages-list/"
+export const createpersonalmessage="/api/personal-messages/"
+export const createbrodcastmail="/api/broadcast-messages/"
+export const createbroadcast="/api/broadcasts/"
