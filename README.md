@@ -31,7 +31,7 @@ This project is an Email Sender application designed to send emails both persona
 2. Clone the repository:
 
    ```bash
-   cd Codeme_project/Backend
+   cd Codeme_project/Backend/MailSender
 
 3. Create a virtual environment and activate it:
 
@@ -66,9 +66,14 @@ This project is an Email Sender application designed to send emails both persona
     ```bash
     npm start
 
+### Screenshots
 
 ![App Screenshot](./Screenshots/5.png)
+
 ![App Screenshot](./Screenshots/4.png)
+
 ![App Screenshot](./Screenshots/3.png)
+
 ![App Screenshot](./Screenshots/2.png)
+
 ![App Screenshot](./Screenshots/1.png)
